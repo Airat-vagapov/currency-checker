@@ -1,7 +1,9 @@
-import Image from "next/image";
+import ConvertForm from "@/app/components/ConvertForm/ConvertForm";
 
 export default function Home() {
-  return (
-    <div>test</div>
-  );
+    return (
+        <>
+            <ConvertForm></ConvertForm>
+        </>
+    );
 }

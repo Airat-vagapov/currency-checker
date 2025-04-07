@@ -1,16 +1,7 @@
 import type { Metadata } from "next";
-import { DM_Sans, Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
-
-// const geistSans = Geist({
-//     variable: "--font-geist-sans",
-//     subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//     variable: "--font-geist-mono",
-//     subsets: ["latin"],
-// });
+import Header from "@/app/components/Header/Header";
 
 const dmSuns = DM_Sans({
     variable: "--dm-suns",
@@ -29,7 +20,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${dmSuns.variable} antialiased`}>{children}</body>
+            <body className={`${dmSuns.variable} antialiased`}>
+                <Header />
+                {children}
+            </body>
         </html>
     );
 }

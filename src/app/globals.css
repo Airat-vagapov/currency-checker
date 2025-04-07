@@ -2,13 +2,27 @@
 
 :root {
     --background: #ffffff;
-    --foreground: #171717;
+    --foreground: #0d0e11;
+    --mainBlack: #0d0e11;
+    --lightBlack: #141318;
+    --purple: #7e67f5;
+    --orange: #ea6b40;
+    --oreangeHover: #d64718;
+    --green: #2fab5c;
+    --red: #ba1124;
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --font-dm-suns: var(--dm-suns);
+    --color-mainBlack: var(--mainBlack);
+    --color-lightBlack: var(--lightBlack);
+    --color-purple: var(--purple);
+    --color-orange: var(--orange);
+    --color-oreangeHover: var(--oreangeHover);
+    --color-green: var(--green);
+    --color-red: var(--red);
 }
 
 @media (prefers-color-scheme: dark) {
