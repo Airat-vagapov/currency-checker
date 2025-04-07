@@ -1,9 +1,13 @@
-import ConvertForm from "@/app/components/ConvertForm/ConvertForm";
+import ConvertForm from "@/components/ConvertForm/ConvertForm";
+import Container from "@/ui/Container/Container";
+import Content from '@/ui/Content/Content'
 
 export default function Home() {
     return (
-        <>
-            <ConvertForm></ConvertForm>
-        </>
+        <Container>
+            <Content>
+                <ConvertForm></ConvertForm>
+            </Content>
+        </Container>
     );
 }

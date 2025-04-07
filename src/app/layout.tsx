@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/app/components/Header/Header";
+import Header from "@/components/Header/Header";
 
 const dmSuns = DM_Sans({
     variable: "--dm-suns",
