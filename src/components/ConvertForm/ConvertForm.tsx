@@ -26,7 +26,6 @@ const ConvertForm = () => {
         },
         onSubmit: (values) => {
             const result = values.currentCurrency * exchangeRatesToRub.AED;
-            console.log(result);
             convertForm.setFieldValue("toConvertCurrency", result);
         },
     });
@@ -53,7 +52,9 @@ const ConvertForm = () => {
                     onBlur={convertForm.handleBlur}
                     value={convertForm.values.toConvertCurrency}
                 />
-                <Button btnType="submit" text="Convert" />
+                <div className="flex items-center justify-center col-span-2">
+                    <Button css={"w-full"} btnType="submit" text="Convert" />
+                </div>
             </FormBlock>
             {/* </form> */}
         </div>
