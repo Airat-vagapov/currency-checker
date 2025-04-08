@@ -1,4 +1,4 @@
 export const exchangeRatesToRub = {
-    AED: 23.5,
+    AED: 0,
     USD: 85.5,
 };

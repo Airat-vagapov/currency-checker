@@ -6,26 +6,26 @@ import Button from "@/ui/Button/Button";
 import { exchangeRatesToRub } from "@/content/currency";
 
 const ConvertForm = () => {
-    // const getExchangeResult = async () => {
-    //     await axios
-    //         .get(
-    //             "https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_1N3gTqp6F8pDKY2pVzs0vBfbAgDbO6h9XQpC1Xnd&base_currency=RUB&currencies="
-    //         )
-    //         .then((res) => {
-    //             console.log(res);
-    //         })
-    //         .catch((error) => {
-    //             console.error(error);
-    //         });
-    // };
+    // const getExchangeResult = async () => {};
 
     const convertForm = useFormik({
         initialValues: {
             currentCurrency: 0,
             toConvertCurrency: 0,
         },
-        onSubmit: (values) => {
-            const result = values.currentCurrency * exchangeRatesToRub.AED;
+        onSubmit: async (values) => {
+            let rubInAed = 0 | exchangeRatesToRub.AED;
+            await fetch("https://www.cbr-xml-daily.ru/daily_json.js")
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data.Valute);
+                    rubInAed = data.Valute.AED.Value;
+                })
+                .catch((error) => console.error("Error:", error));
+
+            console.log(rubInAed);
+            const result = values.currentCurrency * rubInAed;
+            console.log(result);
             convertForm.setFieldValue("toConvertCurrency", result);
         },
     });

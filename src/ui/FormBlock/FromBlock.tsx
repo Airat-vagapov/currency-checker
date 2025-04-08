@@ -7,7 +7,6 @@ type FormBlockProps = {
 };
 
 const FormBlock: React.FC<FormBlockProps> = ({ children, onSubmit, grid }) => {
-    console.log(grid);
     return (
         <form
             className={`
