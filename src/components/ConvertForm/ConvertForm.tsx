@@ -25,8 +25,9 @@ const ConvertForm = () => {
 
             console.log(rubInAed);
             const result = values.currentCurrency * rubInAed;
+
             console.log(result);
-            convertForm.setFieldValue("toConvertCurrency", result);
+            convertForm.setFieldValue("toConvertCurrency", result.toFixed(2));
         },
     });
 
