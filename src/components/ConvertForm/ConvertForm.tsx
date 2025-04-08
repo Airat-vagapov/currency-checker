@@ -10,23 +10,26 @@ const ConvertForm = () => {
 
     const convertForm = useFormik({
         initialValues: {
-            currentCurrency: 0,
-            toConvertCurrency: 0,
+            currentCurrency: "",
+            toConvertCurrency: "",
         },
         onSubmit: async (values) => {
             let rubInAed = 0 | exchangeRatesToRub.AED;
-            await fetch("https://www.cbr-xml-daily.ru/daily_json.js")
-                .then((response) => response.json())
-                .then((data) => {
-                    console.log(data.Valute);
-                    rubInAed = data.Valute.AED.Value;
-                })
-                .catch((error) => console.error("Error:", error));
+            try {
+                await fetch("https://www.cbr-xml-daily.ru/daily_json.js")
+                    .then((response) => response.json())
+                    .then((data) => {
+                        rubInAed = data.Valute.AED.Value;
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                    });
+            } catch (err) {
+                console.error(err);
+                rubInAed = exchangeRatesToRub.AED;
+            }
 
-            console.log(rubInAed);
-            const result = values.currentCurrency * rubInAed;
-
-            console.log(result);
+            const result = Number.parseFloat(values.currentCurrency) * rubInAed;
             convertForm.setFieldValue("toConvertCurrency", result.toFixed(2));
         },
     });
