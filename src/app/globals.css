@@ -4,7 +4,7 @@
     --background: #ffffff;
     --foreground: #0d0e11;
     --mainBlack: #0d0e11;
-    --lightBlack: #141318;
+    --lightBlack: #1f2125;
     --purple: #7e67f5;
     --orange: #ea6b40;
     --oreangeHover: #d64718;
@@ -27,7 +27,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #0a0a0a;
+        --background: #0d0e11;
         --foreground: #ededed;
     }
 }
@@ -37,4 +37,9 @@ body {
     color: var(--foreground);
     font-family: "DM Sans", sans-serif;
     font-style: normal;
+}
+
+input:focus,
+input:visited {
+    outline: none;
 }

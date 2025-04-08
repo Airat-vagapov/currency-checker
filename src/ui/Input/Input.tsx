@@ -26,7 +26,7 @@ const Input: React.FC<InputProps> = ({
             <label htmlFor={name}>{label}</label>
             <div className="relative">
                 <input
-                    className={`bg-mainblack w-full py-4.5 px-3 color-mainwhite rounded-md h-14 border-1 transition-all duration-300
+                    className={`bg-mainBlack w-full py-4.5 px-3 color-mainwhite rounded-md h-14 border-1 transition-all duration-300
                         ${errorText ? "border-errorRed" : "border-transparent"}
                     `}
                     id={id}

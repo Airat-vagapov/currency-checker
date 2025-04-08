@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@everapi/freecurrencyapi-js": "^1.0.1",
+    "axios": "^1.8.4",
     "formik": "^2.4.6",
     "next": "15.2.4",
     "react": "^19.0.0",
