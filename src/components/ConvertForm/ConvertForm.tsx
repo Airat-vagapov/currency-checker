@@ -8,6 +8,7 @@ import { exchangeRatesToRub } from "@/content/currency";
 const ConvertForm = () => {
     // const getExchangeResult = async () => {};
 
+    // Form settimgs
     const convertForm = useFormik({
         initialValues: {
             currentCurrency: "",
