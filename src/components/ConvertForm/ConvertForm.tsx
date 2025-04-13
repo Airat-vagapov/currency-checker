@@ -44,6 +44,7 @@ const ConvertForm = () => {
                     id="currentCurrency"
                     name="currentCurrency"
                     inptType="text"
+                    numeric={true}
                     onChange={convertForm.handleChange}
                     onBlur={convertForm.handleBlur}
                     value={convertForm.values.currentCurrency}

@@ -9,6 +9,7 @@ type InputProps = {
     onBlur: (e: FocusEvent<any, Element>) => void;
     value: string | number;
     errorText?: string;
+    numeric?: boolean;
 };
 
 const Input: React.FC<InputProps> = ({
@@ -20,6 +21,7 @@ const Input: React.FC<InputProps> = ({
     onBlur,
     value,
     errorText,
+    numeric,
 }) => {
     return (
         <div className="flex flex-col gap-4">
@@ -35,6 +37,7 @@ const Input: React.FC<InputProps> = ({
                     onChange={onChange}
                     onBlur={onBlur}
                     value={value}
+                    {... (numeric ? { inputMode: 'numeric' } : {})}
                 />
                 <span
                     className={`absolute top-[4px] left-[12px] text-[10px] text-errorRed transition-all duration-300
