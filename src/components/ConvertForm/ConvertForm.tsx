@@ -53,7 +53,7 @@ const ConvertForm = () => {
 
     return (
         <div className="p-5 bg-lightBlack rounded-lg flex flex-col gap-5">
-            <FormBlock onSubmit={convertForm.handleSubmit} grid={2}>
+            <FormBlock onSubmit={convertForm.handleSubmit} grid={1}>
                 <Input
                     label="AED"
                     id="currentCurrency"
