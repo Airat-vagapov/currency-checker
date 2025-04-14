@@ -42,7 +42,7 @@ const ConvertForm = () => {
             // convertForm.setFieldValue("toConvertCurrency", resultAed.toFixed(2));
 
             const resultObj: ConvertResultType = {
-                'AED': resultAed.toFixed(2),
+                'RUB': resultAed.toFixed(2),
                 'USD': (resultAed / rubInUsd).toFixed(2),
                 'KZT': (resultAed / rubInKzt).toFixed(2),
             }
