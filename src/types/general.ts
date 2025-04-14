@@ -1,0 +1,1 @@
+export type ConvertResultType =  Record<string, string>
