@@ -16,7 +16,7 @@ const CountryIcon: React.FC<CountryIconProps> = ({ valute }) => {
     return (
         <>
             {valute &&
-                <div className='bg-orange rounded-full w-10 h-10 flex items-center justify-center'>
+                <div className='bg-orange rounded-full w-10 h-10 flex items-center justify-center shadow-black shadow-md'>
                     {countryByValute[valute] === 'RU' && <RU title="Russian Federation" className='w-[20px]'></RU>}
                     {countryByValute[valute] === 'US' && <US title="United States" className='w-[20px]'></US>}
                     {countryByValute[valute] === 'KZ' && <KZ title="Kazakhtan" className='w-[20px]'></KZ>}

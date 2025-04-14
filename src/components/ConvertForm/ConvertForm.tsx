@@ -64,7 +64,7 @@ const ConvertForm = () => {
                     onBlur={convertForm.handleBlur}
                     value={convertForm.values.currentCurrency}
                 />
-                <Input
+                {/* <Input
                     label="RUB"
                     id="toConvertCurrency"
                     name="toConvertCurrency"
@@ -72,7 +72,7 @@ const ConvertForm = () => {
                     onChange={convertForm.handleChange}
                     onBlur={convertForm.handleBlur}
                     value={convertForm.values.toConvertCurrency}
-                />
+                /> */}
                 <div className="flex items-center justify-center col-span-2">
                     <Button css={"w-full"} btnType="submit" text="Convert" />
                 </div>
