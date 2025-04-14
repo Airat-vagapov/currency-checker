@@ -16,7 +16,7 @@ const ConvertForm = () => {
     const convertForm = useFormik({
         initialValues: {
             currentCurrency: "",
-            toConvertCurrency: "",
+            // toConvertCurrency: "",
         },
         onSubmit: async (values) => {
             let rubInAed = 0 | exchangeRatesToRub.AED;

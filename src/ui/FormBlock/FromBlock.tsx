@@ -11,8 +11,7 @@ const FormBlock: React.FC<FormBlockProps> = ({ children, onSubmit, grid }) => {
         <form
             className={`
                 gap-y-4
-                ${
-                    grid && gridClasses ? `grid ${gridClasses[grid]} gap-2` : ""
+                ${grid && gridClasses ? ` grid ${gridClasses[grid]} gap-2` : ""
                 }`}
             onSubmit={onSubmit}
         >
