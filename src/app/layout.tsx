@@ -33,7 +33,8 @@ export default function RootLayout({
                     name="apple-mobile-web-app-status-bar-style"
                     content="black-translucent"
                 />
-                <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+                {/* <link rel="apple-touch-icon" href="/icons/icon-192x192.png" /> */}
+                <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" />
             </head>
             <body className={`${dmSuns.variable} antialiased`}>
                 <Header />

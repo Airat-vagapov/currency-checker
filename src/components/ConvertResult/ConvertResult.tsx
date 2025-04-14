@@ -18,7 +18,7 @@ const ConvertResult: React.FC<ConvertResultProps> = ({ data }) => {
                     return (
                         <div key={index} className='flex items-center gap-2'>
                             <CountryIcon valute={currency} />
-                            {value} - {currency}
+                            {value} {currency}
                         </div>
                     )
                 })}
